@@ -1,16 +1,17 @@
-resource "aws_eks_cluster" "" {
-  name     = ""
-  role_arn = ""
-  vpc_config {
-    subnet_ids = []
+resource "aws_vpc" "global-vpc" {
+  cidr_block = "100.0.0.0/20"
+
+  tags = {
+    Name = "testvpc"
+    env  = "development"
   }
 }
 
 
-resource "aws_chime_voice_connector" "" {
-  name               = ""
-  require_encryption = false
-}
+
+
+
+
 
 
 
